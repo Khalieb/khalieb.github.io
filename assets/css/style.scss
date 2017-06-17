@@ -1,0 +1,133 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+section p:first-of-type { 
+    text-align: right;
+}
+
+.index-post-title { 
+    font-size: 24px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.post-content p { 
+    text-align: left !important;
+}
+
+#posts p { 
+    text-align: left !important;
+    font-size: 14px;
+}
+
+.post-header { 
+    width: 100%;
+    float: none;
+    position: relative;
+}
+
+ul { 
+    list-style: none;
+    padding: 0;
+}
+
+hr { 
+    border: none;
+    background: none;
+}
+
+#avatar { 
+    border-radius: 50%;
+    width: 160px;
+    height: 170px;
+}
+
+body { 
+    font-family: sans-serif;
+    line-height: 24px;
+}
+
+header { 
+    float: none;
+    position: relative;
+    padding: 0;
+    width: initial;
+}
+
+footer { 
+    font-family: "Russo One","Arial Black","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    font-size: 12px;
+    float: none;
+    position: relative;
+    width: 100%;
+    bottom: 0px;
+    margin-top: 150px;
+}
+
+header p { 
+    font-size: 12px;
+}
+
+header a { 
+    display: block;
+    margin: 5px 0px;
+}
+
+a { 
+    color: #000000;
+    font-weight: bold;
+}
+
+#description { 
+	font-size: 16px;
+}
+
+.wrapper { 
+    text-align: center;
+}
+
+#home-wrapper { 
+    top: 40%;
+    width: 85%;
+    height: 100px;
+    padding: 20px;
+    position: absolute;
+    text-align: center;
+}
+
+.leftp { 
+    text-align: left;
+}
+
+#content { 
+    margin-top: 50px;
+}
+
+#about { 
+    width: 80%;
+    margin: 20px 0 0 10%;
+}
+
+@media (max-width: 960px) {
+    
+    header { 
+        margin-bottom: 20px;
+    }
+
+    section { 
+        border-top: 1px solid #e5e5e5;
+        border-bottom: none;
+    }
+
+    section p:first-of-type { 
+        text-align: left;
+    }
+    
+    #about { 
+        width: 85%;
+        margin: 20px 0 0 10%;
+    }
+    
+}
