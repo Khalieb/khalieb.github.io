@@ -1,0 +1,27 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+#avatar { 
+    border-radius: 50%;
+    width: 50%;
+}
+
+header { 
+    font-family: "Russo One","Arial Black","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+}
+
+footer { 
+    font-family: "Russo One","Arial Black","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    font-size: 12px;
+}
+
+header p { 
+    font-size: 12px;
+}
+
+#description { 
+	font-size: 16px;
+}
+
