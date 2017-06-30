@@ -13,10 +13,21 @@ $( "#load-playlist" ).click(function( event ) {
 });
 
 $( "#load-rendition" ).click(function( event ) {
-    player.tech_.hls.playlists.media(player.tech_.hls.playlists.master.playlists[$( "#renditions" ).val()]);
+    pl = player.tech_.hls.playlists.master.playlists[$( "#renditions" ).val()]
+
+    player.tech_.hls.representations().forEach(function(rep) {
+        if (rep.bandwidth != pl.bandwidth) { 
+            rep.enabled(false)
+        } else { 
+            rep.enabled(true)
+        }       
+    });
+
+    player.tech_.hls.playlists.media(pl);
 });
 
 var loadRenditions = function() { 
+
     currentPlaylist = player.tech_.hls.playlists.media(); 
     var selected 
     for (i = 0; i < player.tech_.hls.playlists.master.playlists.length; i++) { 
@@ -31,5 +42,5 @@ var loadRenditions = function() {
             $( "#renditions option[value="+i+"]").attr('selected','selected');
         }
     }
-
+    $('.selectpicker').selectpicker('refresh');
 }

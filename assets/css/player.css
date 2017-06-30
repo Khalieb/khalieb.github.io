@@ -1,0 +1,46 @@
+body { 
+    font-family: "Russo One","Arial Black","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    min-width: 740px;
+    max-width: 920px;
+    margin: auto;
+}
+
+h1 { 
+    font-size: 18px;
+}
+
+#nav a { 
+    margin-right: 5px;
+}
+
+header { 
+    margin: auto;
+    width: 80%;
+    margin-top: 20px;
+}
+
+.content { 
+    margin: auto;
+    width: 80%;
+    margin-top: 20px;
+}
+
+.pad { 
+    padding: 20px;
+}
+
+#opts { 
+    text-align: center;
+}
+
+button { 
+    margin-top: 10px;
+}
+
+.btn-group { 
+    width: 100%!important;
+}
+
+.round { 
+    border-radius: 5px;
+}

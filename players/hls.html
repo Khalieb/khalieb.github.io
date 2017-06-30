@@ -5,27 +5,48 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"  crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"  crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/css/bootstrap-select.min.css">
+
   <link href="http://vjs.zencdn.net/6.1.0/video-js.css" rel="stylesheet">
+  <link href="/assets/css/player.css" rel="stylesheet">
+ 
 
   <script src="http://vjs.zencdn.net/6.1.0/video.js"></script>
   <script src="/assets/js/videojs-contrib-hls.js"></script>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"  crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/bootstrap-select.min.js"></script>
+
+
 </head>
 
 <body>
-    <div>
-        <label for="manifest">HLS Manifest:</label>
-        <input type="text" class="form-control" id="manifest" name="manifest">
-        <button type="button" id="load-playlist" class="btn btn-primary btn-lg">Load Playlist</button><br><br>
+    <header>
+        <h1>VideoJS with HLS Contrib</h1>
+        <div id="nav"> 
+            <a href="../index">Home</a>
+            <a href="../player">Players</a>
+        </div>
+    </header>
+    <div class="content">
+        <div id="opts" class="jumbotron pad round">
+            <label for="manifest">HLS Manifest:</label>
+            <input type="text" class="form-control" id="manifest" name="manifest">
+            <button type="button" id="load-playlist" class="btn btn-primary btn-lg">Load Playlist</button><br><br>
 
-      	<label for="manifest">Renditions:</label>
-		<select id="renditions">
-		</select>
-        <button type="button" id="load-rendition" class="btn btn-primary btn-lg">Load Rendition</button><br><br>
+      	    <label for="manifest">Renditions:</label>
+		    <select id="renditions" class="selectpicker">
+		    </select>
+            <button type="button" id="load-rendition" class="btn btn-primary btn-lg">Load Rendition</button><br><br>
+        </div>
+
+        <div class="player jumbotron pad round">
+            <video id="example-video" width="640" height="264" class="video-js vjs-default-skin example-video vjs-16-9 vjs-big-play-centered" controls></video>
+        </div>
     </div>  
-
-  <video id=example-video width=960 height=540 class="video-js vjs-default-skin" controls></video>
 
   <script src="/assets/js/hls.js"></script>
 
