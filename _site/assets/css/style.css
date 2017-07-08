@@ -212,7 +212,9 @@ footer { width: 270px; float: left; position: fixed; bottom: 50px; -webkit-font-
   header ul { width: 99%; }
   header li, header ul li + li + li { width: 33%; } }
 @media print { body { padding: 0.4in; font-size: 12pt; color: #444; } }
-#avatar { border-radius: 50%; width: 50%; }
+section p:first-of-type { text-align: right; }
+
+#avatar { border-radius: 50%; width: 135px; height: 150px; }
 
 header { font-family: "Russo One","Arial Black","Hiragino Sans GB","Microsoft YaHei",sans-serif; }
 
@@ -220,4 +222,10 @@ footer { font-family: "Russo One","Arial Black","Hiragino Sans GB","Microsoft Ya
 
 header p { font-size: 12px; }
 
+header a { display: block; margin: 5px 0px; }
+
 #description { font-size: 16px; }
+
+@media (max-width: 960px) { header { margin-bottom: 20px; }
+  section { border-top: 1px solid #e5e5e5; border-bottom: none; }
+  section p:first-of-type { text-align: left; } }
