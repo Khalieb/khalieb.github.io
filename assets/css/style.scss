@@ -3,9 +3,14 @@
 
 @import "{{ site.theme }}";
 
+section p:first-of-type { 
+    text-align: right;
+}
+
 #avatar { 
     border-radius: 50%;
-    width: 50%;
+    width: 135px;
+    height: 150px;
 }
 
 header { 
@@ -21,7 +26,28 @@ header p {
     font-size: 12px;
 }
 
+header a { 
+    display: block;
+    margin: 5px 0px;
+}
+
 #description { 
 	font-size: 16px;
 }
 
+@media (max-width: 960px) {
+    
+    header { 
+        margin-bottom: 20px;
+    }
+
+    section { 
+        border-top: 1px solid #e5e5e5;
+        border-bottom: none;
+    }
+
+    section p:first-of-type { 
+        text-align: left;
+    }
+    
+}
