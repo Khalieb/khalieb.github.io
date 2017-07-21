@@ -16,7 +16,7 @@ $( "#load-rendition" ).click(function( event ) {
     pl = player.tech_.hls.playlists.master.playlists[$( "#renditions" ).val()]
 
     player.tech_.hls.representations().forEach(function(rep) {
-        if (rep.bandwidth != pl.bandwidth) { 
+        if (rep.bandwidth != pl.attributes.BANDWIDTH) { 
             rep.enabled(false)
         } else { 
             rep.enabled(true)
