@@ -1,0 +1,14 @@
+---
+layout: default
+description: A description about my blog homepage
+---
+
+<div id="posts">
+<ul> {% for post in site.posts %}
+    <li>
+      <a class="index-post-title" href="{{ post.url }}">{{ post.title }}</a>
+      {{ post.excerpt }}
+    </li>
+  {% endfor %}
+</ul>
+</div>
