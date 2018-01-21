@@ -9,8 +9,10 @@ h1 {
     font-size: 18px;
 }
 
-#nav a { 
+a { 
     margin-right: 5px;
+    color: #000000;
+    font-weight: bold;
 }
 
 header { 
