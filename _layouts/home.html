@@ -11,7 +11,12 @@
     <![endif]-->
   </head>
   <body>
-      <div class="wrapper">
+      <div id="home-wrapper">
+        <header>
+          <img id="avatar" src="/assets/img/avatar.png">
+          <p id="description">{{ site.description | default: site.github.project_tagline }}</p>
+        </header>
+
         <p id="navigation">
           <a href="/">Home</a> &nbsp; 
           <a href="thoughts">Thoughts</a> &nbsp;
@@ -19,8 +24,6 @@
           <a href="https://github.com/khalieb">Github</a> 
           <hr/>
         </p>
-
-        {{ content }} 
 
         <footer>
           {% if site.github.is_project_page %}
