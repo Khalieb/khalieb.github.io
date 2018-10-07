@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/css/bootstrap-select.min.css">
 
   <link href="http://vjs.zencdn.net/6.1.0/video-js.css" rel="stylesheet">
+  <link href="/assets/css/style.css" rel="stylesheet">
   <link href="/assets/css/player.css" rel="stylesheet">
  
 
@@ -25,29 +26,32 @@
 </head>
 
 <body>
-    <header>
-        <h1>VideoJS with HLS Contrib</h1>
-        <div id="nav"> 
-            <a href="../index">Home</a>
-            <a href="../player">Players</a>
-        </div>
-    </header>
-    <div class="content">
-        <div id="opts" class="jumbotron pad round">
-            <label for="manifest">HLS Manifest:</label>
-            <input type="text" class="form-control" id="manifest" name="manifest">
-            <button type="button" id="load-playlist" class="btn btn-primary btn-lg">Load Playlist</button><br><br>
+    <div class="wrapper">
+        <p id="navigation">
+          <a href="/">Home</a> &nbsp; 
+          <a href="../yarn">Yarn</a> &nbsp;
+          <a href="../player">Players</a> &nbsp;
+          <a href="https://github.com/khalieb">Github</a> 
+          <hr/>
+        </p>
+        <div class="content">
+            <div id="opts" class="jumbotron pad round">
+                <label for="manifest">HLS Manifest:</label>
+                <input type="text" class="form-control" id="manifest" name="manifest">
+                <button type="button" id="load-playlist" class="btn btn-primary btn-lg">Load Playlist</button><br><br>
 
-      	    <label for="manifest">Renditions:</label>
-		    <select id="renditions" class="selectpicker">
-		    </select>
-            <button type="button" id="load-rendition" class="btn btn-primary btn-lg">Load Rendition</button><br><br>
-        </div>
+          	    <label for="manifest">Renditions:</label>
+	    	    <select id="renditions" class="selectpicker">
+	    	    </select>
+                <button type="button" id="load-rendition" class="btn btn-primary btn-lg">Load Rendition</button><br><br>
+            </div>
 
-        <div class="player jumbotron pad round">
-            <video id="example-video" width="640" height="264" class="video-js vjs-default-skin example-video vjs-16-9 vjs-big-play-centered" controls></video>
-        </div>
-    </div>  
+            <div class="player jumbotron pad round">
+                <video id="example-video" width="640" height="264" class="video-js vjs-default-skin example-video vjs-16-9 vjs-big-play-centered" controls></video>
+            </div>
+        </div>  
+
+    </div>
 
   <script src="/assets/js/hls.js"></script>
 
