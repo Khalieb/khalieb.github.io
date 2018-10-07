@@ -50,7 +50,6 @@ body {
 }
 
 header { 
-    font-family: "Russo One","Arial Black","Hiragino Sans GB","Microsoft YaHei",sans-serif;
     float: none;
     position: relative;
     width: 300px;
@@ -86,7 +85,6 @@ a {
 
 .wrapper { 
     text-align: center;
-    top: 10%;
 }
 
 #home-wrapper { 
@@ -100,8 +98,8 @@ a {
     left: 50%;
 }
 
-#players h2 { 
-    border-bottom: 1px;
+#content { 
+    margin-top: 50px;
 }
 
 @media (max-width: 960px) {
