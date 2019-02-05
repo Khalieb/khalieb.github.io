@@ -14,18 +14,26 @@
       <div id="home-wrapper">
         <header>
           <img id="avatar" src="/assets/img/avatar.png">
-          <p id="description">{{ site.description | default: site.github.project_tagline }}</p>
         </header>
 
         <p id="navigation">
           <a href="/">Home</a> &nbsp; 
-          <a href="about">About</a> &nbsp;
-          <a href="yarn">Yarn</a> &nbsp;
-          <a href="player">Players</a> &nbsp;
+          <a href="{{ base_url }}/about">About</a> &nbsp;
+          <a href="{{ base_url }}/yarn">Yarn</a> &nbsp;
+          <a href="{{ base_url }}/player">Players</a> &nbsp;
           <a href="https://github.com/khalieb">Github</a> 
           <hr/>
         </p>
+        
+        <div id="about">
+            <h1>Caleb Welsh</h1>
+            
+            <h5>Works at: <a href="https://brightcove.com">Brightcove</a></h5>
+            <p>My thoughts are not my own.</p>
+        </div>
       </div>
+      
+
     <script src="{{ '/assets/js/scale.fix.js' | relative_url }}"></script>
 
 
