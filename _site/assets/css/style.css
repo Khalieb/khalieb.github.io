@@ -230,7 +230,7 @@ hr { border: none; background: none; }
 
 body { font-family: sans-serif; line-height: 24px; }
 
-header { font-family: "Russo One","Arial Black","Hiragino Sans GB","Microsoft YaHei",sans-serif; float: none; position: relative; width: 300px; }
+header { float: none; position: relative; width: 300px; }
 
 footer { font-family: "Russo One","Arial Black","Hiragino Sans GB","Microsoft YaHei",sans-serif; font-size: 12px; float: none; position: relative; width: 100%; bottom: 0px; margin-top: 150px; }
 
@@ -242,11 +242,11 @@ a { color: #000000; font-weight: bold; }
 
 #description { font-size: 16px; }
 
-.wrapper { text-align: center; top: 10%; }
+.wrapper { text-align: center; }
 
 #home-wrapper { top: 40%; width: 300px; height: 100px; padding: 20px; position: absolute; margin: -70px 0 0 -170px; text-align: center; left: 50%; }
 
-#players h2 { border-bottom: 1px; }
+#content { margin-top: 50px; }
 
 @media (max-width: 960px) { header { margin-bottom: 20px; }
   section { border-top: 1px solid #e5e5e5; border-bottom: none; }
