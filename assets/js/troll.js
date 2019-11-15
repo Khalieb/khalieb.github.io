@@ -1,4 +1,4 @@
-$( document ).ready(function() {
+$( document ).onload(function() {
     let tag = $.urlParam('tag');
     let url = 'https://api.giphy.com/v1/gifs/random?api_key=VVejTPkeA8kRnzaxPp9IgAsiO5K1caxV&tag=' + tag + '&rating=PG-13';
     $.get( url, function( data ) {
