@@ -2,22 +2,14 @@
 <html lang="{{ site.lang | default: "en-US" }}">
   <head>
     <meta charset="utf-8">
-    <!-— facebook open graph tags -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="http://calebwelsh.info/" />
-    <meta property="og:title" content="caleb welsh troll" />
-    <meta property="og:description" content="gifs" />
-    <meta property="og:image" id="troll" content="" />
-    <meta property="og:image:type" class="troll-src" content="image/gif">
-     
-     <!-— twitter card tags additive with the og: tags -->
-     <meta name="twitter:card" content="summary_large_image">
-     <meta name="twitter:domain" value="ruraljuror.com" />
-     <meta name="twitter:title" value="caleb welsh troll" />
+     <meta name="twitter:card" content="player">
+     <meta name="twitter:domain" value="calebwelsh.info" />
+     <meta name="twitter:title" value="trolling" />
      <meta name="twitter:description" value="gifs" />
-     <meta property="twitter:image" class="troll-src" content="" />
-     <meta property="twitter:image:src" class="troll-src" content="" />
-     <meta property="twitter:image:type" content="image/gif">
+     <meta name="twitter:image" class="troll-src" content="" />
+     <meta name="twitter:image:src" class="troll-src" content="" />
+     <meta name="twitter:player:width" class="troll-width" content="">
+     <meta name="twitter:player:height" class="troll-height" content="">
      <meta name="twitter:url" value="http://www.calebwelsh.info/" />
 
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
@@ -27,6 +19,6 @@
   <script src="/assets/js/troll.js"></script>
   </head>
   <body>
-    <img id="troll"></img>
+    <img class="troll"></img>
   </body>
 </html>

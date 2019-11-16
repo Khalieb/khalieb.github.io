@@ -2,11 +2,13 @@ $( document ).ready(function() {
     let tag = $.urlParam('tag');
     let url = 'https://api.giphy.com/v1/gifs/random?api_key=VVejTPkeA8kRnzaxPp9IgAsiO5K1caxV&tag=' + tag + '&rating=PG-13';
     $.get( url, function( data ) {
-      console.log(data);
-      $('#troll').attr('src', data.data.image_url);
-      $('.troll-src').attr('content', data.data.image_url);
-      //$('#troll-width').attr('content', data.data.image_width);
-      //#$('#troll-height').attr('content', data.data.image_height);
+      let image_url = data.data.image_url;
+      let height = data.data.image_height;
+      let width = data.data.image_width;
+      $('.troll').attr('src', image_url);
+      $('.troll-src').attr('content', image_url);
+      $('.troll-width').attr('content', width);
+      $('.troll-height').attr('content', height);
     });
 });
 
