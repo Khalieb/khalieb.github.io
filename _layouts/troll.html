@@ -2,20 +2,25 @@
 <html lang="{{ site.lang | default: "en-US" }}">
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta property="og:site_name" content="calebwelsh">
-    <meta property="og:url" id="troll-meta" content="">
-    <meta property="og:title" content="Gif as thumbnail by calebwelsh.info" />
-    <meta property="og:description" content="gifs">
-    <meta content="video.other" property="og:type" />
-    <meta id="troll-meta" property="og:image" content="">
-    <meta property="og:image:type" content="image/gif">
-    <meta property="og:image:width" id="troll-width" content="">
-    <meta property="og:image:height" id="troll-height" content="">
+    <!-— facebook open graph tags -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://calebwelsh.info/" />
+    <meta property="og:title" content="caleb welsh troll" />
+    <meta property="og:description" content="gifs" />
+    <meta property="og:image" id="troll" content="" />
+    <meta property="og:image:type" class="troll-src" content="image/gif">
+     
+     <!-— twitter card tags additive with the og: tags -->
+     <meta name="twitter:card" content="summary_large_image">
+     <meta name="twitter:domain" value="ruraljuror.com" />
+     <meta name="twitter:title" value="caleb welsh troll" />
+     <meta name="twitter:description" value="gifs" />
+     <meta property="twitter:image" class="troll-src" content="" />
+     <meta property="twitter:image:src" class="troll-src" content="" />
+     <meta property="twitter:image:type" content="image/gif">
+     <meta name="twitter:url" value="http://www.calebwelsh.info/" />
 
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
-    <meta name="viewport" content="width=device-width">
     <!--[if lt IE 9]>
     <![endif]-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
