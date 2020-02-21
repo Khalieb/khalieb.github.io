@@ -77,31 +77,13 @@
       })();
     };
 
-  /**
-   * register the thubmnails plugin
-   */
   videojs.registerPlugin('thumbnails', function(options) {
     var div, settings, img, player, progressControl, duration, moveListener, moveCancel, thumbTrack, cues;
     defaults.basePath = options.basePath || defaults.basePath;
     settings = extend({}, defaults, options);
     player = this;
     player.on('loadedmetadata', function() {
-      //detect which track we use. For now we just use the first metadata track
-      var numtracks = player.textTracks().length;
-      if (numtracks === 0) {
-        return;
-      }
-      i = 0;
-      while (i<numtracks) {
-        if (player.remoteTextTracks()[i].kind==='metadata') {
-          thumbTrack = player.remoteTextTracks()[i];
-          if (thumbTrack.cues && thumbTrack.cues.length && thumbTrack.cues.length > 0) {
-			console.log(thumbTrack);
-            break;
-          }
-        }
-        i++;
-      }
+		thumbTrack = player.remoteTextTracks()[0]
     });
     
     androidActivePolyfill(player); ;
@@ -149,14 +131,11 @@
       const seekBarRect = videojs.dom.getBoundingClientRect(seekBarEl);
       let seekBarPoint = videojs.dom.getPointerPosition(seekBarEl, event).x;
 	  mouseTime = seekBarPoint * this.player_.duration();
-	  //console.log(mouseTime/60);
-	  //console.log(player.controlBar.progressControl.seekBar.calculateDistance(event) * this.player_.duration());
+
 
       //Now check which of the cues applies
       var cnum = thumbTrack&&thumbTrack.cues.length;
-	  console.log(thumbTrack.cues)
       i = 0;
-	  console.log(thumbTrack.cues);
       while (i<cnum) {
         var ccue = thumbTrack.cues[i];
         if (ccue.startTime <= mouseTime && ccue.endTime >= mouseTime) {
