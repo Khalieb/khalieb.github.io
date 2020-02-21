@@ -3,9 +3,17 @@ var player = videojs('example-video');
 $( "#load-playlist" ).click(function( event ) {
 
   player.src({
-    src: $( "#manifest" ).val(),
+    //src: $( "#manifest" ).val(),
+    src: "http://manifest.qa.boltdns.net/manifest/v1/hls/v4/clear/cwelsh/bb2cc9b7-d524-461f-8b42-5010e76f4b36/10s/master.m3u8?behavior_id=b1acb69f-2bc0-4ac6-9577-4630cc30fde8&fastly_token=NWU3NDAzMjJfMGVmY2QyY2U0OTg0NGNlMDY1NzRmNDRkZThmMDU0YmNmNTQ4NzU5ZDA0MzYzNWI4MTY4MzJkZTU4Yjk1ZjkyZQ%3D%3D",
     type: 'application/x-mpegURL'
   });
+
+  var thumbnails = $("#thumbnails").val()
+  thumbnails = "http://manifest.qa.boltdns.net/thumbnail/v1/cwelsh/bb2cc9b7-d524-461f-8b42-5010e76f4b36/3286af81-794b-4b3d-8220-645bba7dba65/thumbnail.webvtt?behavior_id=b1acb69f-2bc0-4ac6-9577-4630cc30fde8&fastly_token=NWU3NDAzMjJfMGMxY2JmMDhiMzBhNDM1ZGY3YjVjNWMwMWYxNThhMTliODVhYTBhNDc4OTY2OGVjOTVlOGNjMWEwMzlmOTkzMA%3D%3D"
+  if (thumbnails != "") { 
+	player.addRemoteTextTrack({kind: "metadata", src: thumbnails, mode: 'hidden'}, true);
+	player.thumbnails({ width: 120, height: 90 });
+  }
 
   event.preventDefault();
   player.on("loadedmetadata", loadRenditions)
