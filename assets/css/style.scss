@@ -55,6 +55,10 @@ header {
     width: 300px;
 }
 
+.about-header { 
+    width: 500px;
+}
+
 footer { 
     font-family: "Russo One","Arial Black","Hiragino Sans GB","Microsoft YaHei",sans-serif;
     font-size: 12px;
@@ -96,6 +100,21 @@ a {
     margin: -70px 0 0 -170px;
     text-align: center;
     left: 50%;
+}
+
+#about-wrapper { 
+    top: 40%;
+    width: 500px;
+    height: 100px;
+    padding: 20px;
+    position: absolute;
+    margin: -70px 0 0 -170px;
+    text-align: center;
+    left: 47%;
+}
+
+.left-p { 
+    text-align: left;
 }
 
 #content { 
