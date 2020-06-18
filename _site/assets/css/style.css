@@ -230,7 +230,7 @@ hr { border: none; background: none; }
 
 body { font-family: sans-serif; line-height: 24px; }
 
-header { float: none; position: relative; width: 300px; }
+header { float: none; position: relative; padding: 0; width: initial; }
 
 footer { font-family: "Russo One","Arial Black","Hiragino Sans GB","Microsoft YaHei",sans-serif; font-size: 12px; float: none; position: relative; width: 100%; bottom: 0px; margin-top: 150px; }
 
@@ -244,10 +244,15 @@ a { color: #000000; font-weight: bold; }
 
 .wrapper { text-align: center; }
 
-#home-wrapper { top: 40%; width: 300px; height: 100px; padding: 20px; position: absolute; margin: -70px 0 0 -170px; text-align: center; left: 50%; }
+#home-wrapper { top: 40%; width: 85%; height: 100px; padding: 20px; position: absolute; text-align: center; }
+
+.leftp { text-align: left; }
 
 #content { margin-top: 50px; }
 
+#about { width: 80%; margin: 20px 0 0 10%; }
+
 @media (max-width: 960px) { header { margin-bottom: 20px; }
   section { border-top: 1px solid #e5e5e5; border-bottom: none; }
-  section p:first-of-type { text-align: left; } }
+  section p:first-of-type { text-align: left; }
+  #about { width: 85%; margin: 20px 0 0 10%; } }

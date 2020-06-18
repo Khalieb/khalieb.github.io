@@ -52,11 +52,8 @@ body {
 header { 
     float: none;
     position: relative;
-    width: 300px;
-}
-
-.about-header { 
-    width: 500px;
+    padding: 0;
+    width: initial;
 }
 
 footer { 
@@ -93,24 +90,11 @@ a {
 
 #home-wrapper { 
     top: 40%;
-    width: 300px;
+    width: 85%;
     height: 100px;
     padding: 20px;
     position: absolute;
-    margin: -70px 0 0 -170px;
     text-align: center;
-    left: 50%;
-}
-
-#about-wrapper { 
-    top: 40%;
-    width: 500px;
-    height: 100px;
-    padding: 20px;
-    position: absolute;
-    margin: -70px 0 0 -170px;
-    text-align: center;
-    left: 47%;
 }
 
 .leftp { 
@@ -119,6 +103,11 @@ a {
 
 #content { 
     margin-top: 50px;
+}
+
+#about { 
+    width: 80%;
+    margin: 20px 0 0 10%;
 }
 
 @media (max-width: 960px) {
@@ -136,14 +125,9 @@ a {
         text-align: left;
     }
     
-    .about-header { 
-        width: 325px;
-    }
-
-    #about-wrapper { 
-        top: 40%;
-        width: 325px;
-        left: 49%;
+    #about { 
+        width: 85%;
+        margin: 20px 0 0 10%;
     }
     
 }
